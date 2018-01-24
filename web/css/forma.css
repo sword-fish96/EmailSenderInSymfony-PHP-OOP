@@ -1,0 +1,25 @@
+body{
+    background:	#40E0D0;  
+	
+}
+#content{
+    width: 527px;
+    margin: 0px auto 0px auto;
+    border: 14px outset #98CfEB;
+    text-align:center;
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	background:#98CfEB;
+}
+table{
+    border-collapse:collapse; 
+    margin: 5px;
+    
+}
+.mezo{
+    text-align: left;
+    
+}
+div{
+	margin:0px auto 0px auto;
+}
+

@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<div id="content">
+<h1>Email küldés</h1>
+	<form action="{{ path ('sending_email') }}" method="post">													<!--POST elküldése a szervernek-->
+		<table  >
+			<tr class="mezo">
+				<td >Címzett email cím:</td>
+				<td><input type="email" name="email"> * <br/></td>
+			</tr>
+			<tr class="mezo">
+				<td >Tárgy:</td>
+				<td><select name="targy" size="1">
+					<option value="Általános">Általános</option>
+					<option value="Segélykérés">Segélykérés</option>
+					<option value="Ismerkedés">Ismerkedés</option>
+					<option value="Problémabejelentés">Problémabejelentés</option>
+					<option value="Kérdés">Kérdés</option>
+				</select>
+				</td>
+			</tr>
+			<tr class="mezo">
+				<td colspan="2">Üzenet:</td>
+			</tr>
+			<tr>
+				<td colspan="2"><textarea rows="14" cols="68" name="text" maxlength="512"></textarea></td>
+			</tr>
+			<tr>
+				<td colspan="2" >
+					<div class="g-recaptcha" data-sitekey="6LdXzT4UAAAAAKFZ7-zNBterNge6NykEf5uZvQDy"></div>
+
+					<button type="submit" name="submit">Email küldése</button>
+					
+				</td>
+			</tr>
+		</table>
+	</form>
+</div>
+{% endblock %}
+{% block javascripts %}
+
+
+
+{% endblock %}
